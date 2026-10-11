@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For My Wife</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="intro-overlay" aria-hidden="true">
+      <div class="intro-overlay-inner">
+        <span class="intro-kicker">A moment, just for us</span>
+        <h2>For my wife</h2>
+      </div>
+    </div>
+
+    <button class="music-toggle" id="musicToggle" type="button" aria-label="Pause music" aria-pressed="true" hidden>♫</button>
+    <audio id="backgroundMusic" src="music/background.mp3" loop preload="auto"></audio>
+
+    <div class="leaves" aria-hidden="true">
+      <span class="leaf">✿</span>
+      <span class="leaf">✿</span>
+      <span class="leaf">✿</span>
+      <span class="leaf">✿</span>
+      <span class="flower">✦</span>
+      <span class="flower">✦</span>
+    </div>
+
+    <main>
+      <section class="panel opening-panel" id="opening">
+        <div class="intro-badge">A note for you</div>
+        <h1 class="intro-title"><span class="glow-text">For my</span><br />Wife</h1>
+        <p class="intro-copy">You are my favorite chapter, my peace, and my forever.</p>
+        <div class="intro-rule" aria-hidden="true"></div>
+        <button class="primary intro-button" data-next="dateScreen">Open your surprise</button>
+      </section>
+
+      <section class="panel hidden quiz-panel date-panel" id="dateScreen">
+        <div class="progress">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="eyebrow">Memory check · 01</div>
+        <h2>When did our little <span class="glow-text">love story</span> begin?</h2>
+        <p class="sub">Think of the exact date we started this beautiful chapter.</p>
+        <input id="dateAnswer" type="text" inputmode="numeric" maxlength="10" placeholder="MM/DD/YYYY" autocomplete="off" />
+        <button class="primary" id="dateButton">That special day</button>
+        <p class="feedback" id="dateToast" role="status"></p>
+      </section>
+
+      <section class="panel hidden quiz-panel code-panel" id="codeScreen">
+        <div class="progress">
+          <span class="dot active"></span>
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="eyebrow">Memory check · 02</div>
+        <h2>Enter our little <span class="glow-text">secret code</span></h2>
+        <p class="sub">Hint: it matches the number of months we've been together.</p>
+        <input id="codeAnswer" type="password" inputmode="numeric" placeholder="Enter the code" autocomplete="off" />
+        <button class="primary" id="codeButton">Unlock the next page</button>
+        <p class="feedback" id="codeToast" role="status"></p>
+      </section>
+
+      <section class="panel hidden quiz-panel color-panel" id="colorScreen">
+        <div class="progress">
+          <span class="dot active"></span>
+          <span class="dot active"></span>
+          <span class="dot active"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="eyebrow">Memory check · 03</div>
+        <h2>What's your partner's <span class="glow-text">favorite color?</span></h2>
+        <p class="sub">Choose carefully, darling.</p>
+        <div class="options">
+          <button class="choice" data-color="Blue">Blue</button>
+          <button class="choice" data-color="Orange">Orange</button>
+          <button class="choice" data-color="Black">Black</button>
+          <button class="choice" data-color="Brown">Brown</button>
+        </div>
+        <p class="feedback" id="colorToast" role="status"></p>
+      </section>
+
+      <section class="panel hidden quiz-panel love-panel" id="loveScreen">
+        <div class="progress">
+          <span class="dot active"></span>
+          <span class="dot active"></span>
+          <span class="dot active"></span>
+          <span class="dot active"></span>
+        </div>
+        <div class="eyebrow">One last question</div>
+        <div class="final-heart">♥</div>
+        <h2>Do you love me, darling?</h2>
+        <p class="sub">Think carefully... hehe.</p>
+        <div class="options">
+          <button class="primary" id="yesButton">YES, OF COURSE!</button>
+          <button class="secondary" id="noButton">No</button>
+        </div>
+        <p class="feedback" id="loveToast" role="status"></p>
+      </section>
+
+      <section class="panel hidden" id="messageScreen">
+        <div class="eyebrow">From my heart to yours</div>
+        <h1 class="glow-text">Yeheyyy! I knew you loved me!</h1>
+        <p class="sub">Happy 3rd monthsary myloveee.</p>
+        <button class="primary" id="openMessageButton">Open message</button>
+        <div class="message hidden" id="loveLetter">Hello my love!
+
+Happy 3rd monthsary to us, love.
+
+Thank you for always being patient with me, for loving me the way you do, and for the comfort you give me every day. Thank you for staying, even when I can be hard to handle. Thank you for being my safe place, my peace, and my favorite person.
+
+I’m sorry for the times I made you feel unimportant, for my jealousy and overthinking, and for the ways I sometimes fail to show you how much you mean to me. I know I’m not perfect, but I promise I’m learning and trying to be better for you.
+
+Darling, always remember that I love you so deeply and so sincerely. I want to keep choosing you, caring for you, and making you feel loved in every way I can. You are my person, my home, and the one I want to keep growing with.
+
+I love you so much, honey. Forever and always.
+
+With all my heart,
+Your love</div>
+        <p class="message-decor">✿ ♥ ✿</p>
+  <button class="primary" id="moreLoveButton" hidden>Send you a little more love</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
